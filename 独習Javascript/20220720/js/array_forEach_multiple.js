@@ -1,0 +1,5 @@
+const arry = [1,2,3,4,5];
+function multiply5(value){
+    console.log(value * 5);
+}
+arry.forEach(multiply5);

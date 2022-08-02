@@ -1,0 +1,19 @@
+<section style="background-color: yellow;">
+    これは先祖要素です。
+    <div>
+        <span id="target"></span>
+    </div>
+</section>
+
+<section style="background-color:orange">
+    これは先祖要素ではありません。
+</section>
+
+<script>
+    setTimeout(() => {
+        
+        const target = document.querySelector("#target");
+        const section = target.closest("section");
+        section.prepend("発見 -> ");
+    }, 2000);
+</script>

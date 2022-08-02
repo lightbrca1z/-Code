@@ -1,0 +1,6 @@
+const num = 5;
+if(num >= 0 && num < 10){
+    console.log("0以上10未満です。");
+}else{
+    console.log("それ以外です。");
+}

@@ -1,0 +1,7 @@
+const fruit = "りんご";
+
+if(fruit === "ばなな"){
+    console.log("ばななが見つかりました");
+}else{
+    console.log("ばなな以外が見つかりました。");
+}

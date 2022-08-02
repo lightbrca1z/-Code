@@ -1,0 +1,21 @@
+<body>
+    <div></div>
+
+    <style>
+        body{
+            margin: 0;
+        }
+        div{
+            background: linear-gradient(#e66465,#9198e5);
+            height: 200vh;
+        }
+    </style>
+    <script>
+        function preventScroll(event){
+            event.preventDefault();
+        }
+        
+        document.addEventListener("touchmove", preventScroll,{passive: false});
+        document.addEventListener("while", preventScroll,{passive: false});
+    </script>
+</body>

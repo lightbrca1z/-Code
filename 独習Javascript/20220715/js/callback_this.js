@@ -1,0 +1,14 @@
+window.name = "花子";
+
+const taro = {
+    name: "太郎",
+    hello: function(){
+        console.log("こんにちは, " + this.name);
+    }
+}
+
+function greeting(callback){
+    callback();
+}
+
+greeting(taro.hello);

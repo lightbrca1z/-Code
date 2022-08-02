@@ -1,0 +1,15 @@
+<a href="https://google.com/">Googleへは行かせません</a><br/>
+<a href="https://yahoo.cojp/">Yahooへは行かせません</a>
+
+<script>
+    //すべてのアンカータグ(a)を取得
+    const links = document.querySelectorAll("a");
+
+    //すべてのアンカータグに対してリンク無効化のアクションを追加
+    links.forEach(link =>
+        link.addEventListener("click", event => {
+            event.preventDefault();
+            alert(event.currentTarget.textContent);
+        })
+    );
+</script>

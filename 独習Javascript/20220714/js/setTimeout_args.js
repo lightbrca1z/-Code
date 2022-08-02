@@ -1,0 +1,5 @@
+function hello(name){
+    console.log("こんにちは、" + name);
+}
+
+setTimeout(hello,3000,"独習太郎");

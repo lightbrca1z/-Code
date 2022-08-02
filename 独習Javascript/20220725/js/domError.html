@@ -1,0 +1,13 @@
+<div id="before">この要素はscriptタグより前にあるため取得可能です。</div>
+
+<script>
+    const beforeEl = document.querySelector("#before");
+    console.log(beforeEl.textContent);
+
+    //要素が存在しない為、エラーになる。
+    const afterEl = document.querySelector("#after");
+    console.log(afterEl.textContent);
+
+</script>
+
+<div id="after">この要素はscriptタグより後にあるため取得できません。</div>

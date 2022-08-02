@@ -1,0 +1,17 @@
+try{
+    //数値に対して文字列のメソッドであるtoUpperCaseを読んだ場合
+    const num = 1;
+    
+    //Errorの切り替え
+    num.toUpperCase();
+
+    //存在しない変数val2を参照した場合
+    let val1 = val2 + 1;
+}catch(error){
+    //例外の種類に応じて処理を分岐する
+    if(error instanceof TypeError){
+        console.log("TypeErrorが発生したときの処理");
+    } else if (error instanceof ReferenceError){
+        console.log("ReferenceErrorが発生したときの処理");
+    }
+}

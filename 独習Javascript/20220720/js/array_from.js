@@ -1,0 +1,6 @@
+const set = new Set();
+set.add(1);
+set.add(2);
+set.add(3);
+const convertedArray = Array.from(set);
+console.log(convertedArray);

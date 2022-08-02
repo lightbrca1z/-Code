@@ -1,0 +1,4 @@
+primitiveとは。
+
+メソッドを持たない型。
+String,int。

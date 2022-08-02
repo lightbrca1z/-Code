@@ -1,0 +1,5 @@
+Promise.reject("エラーの理由").catch(error => {
+    console.error(error);
+})
+
+console.log("グローバルコンテキスト終了");

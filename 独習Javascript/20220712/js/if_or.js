@@ -1,0 +1,6 @@
+const fruit = "みかん";
+if(fruit === "みかん" || fruit === "りんご"){
+    console.log("みかん、またはりんごです。");
+}else{
+    console.log("それ以外です。");
+}

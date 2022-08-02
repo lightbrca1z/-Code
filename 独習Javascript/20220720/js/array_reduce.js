@@ -1,0 +1,6 @@
+function reducer(totalValue, currentValue){
+    return totalValue + currentValue;
+}
+const arry = [1,2,3,4,5];
+const result = arry.reduce(reducer);
+console.log(result);

@@ -1,0 +1,5 @@
+const val = 0;
+switch(val){
+    case "0": console.log("case文が実行されました。");
+    default: console.log("default文が実行されました");
+}

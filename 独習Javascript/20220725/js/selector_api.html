@@ -1,0 +1,20 @@
+<section id="container">
+    <span class="target-cls"></span>
+    <div class="list">
+        <input name="child1">
+        <input name="child2">
+    </div>
+    <p class="target-cls"></p>
+</section>
+<script>
+    const elById = document.querySelector("#container");
+    console.log(elById);
+    const elsByCls = document.querySelectorAll(".target-cls");
+    console.log(elsByCls);
+    const elByCls = document.querySelector(".target-cls");
+    console.log(elByCls);
+    const elsByName = document.querySelectorAll('[name="child1"]');
+    console.log(elsByName);
+    const elsByTag = document.querySelectorAll("p");
+    console.log(elsByTag);
+</script>

@@ -1,0 +1,3 @@
+const fruits = new Set(["apple","orange"]);
+fruits.clear();
+console.log(fruits);

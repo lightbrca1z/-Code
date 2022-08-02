@@ -1,0 +1,2 @@
+const fruits = new Set(["apple","orange"]);
+console.log(fruits.size);

@@ -1,0 +1,9 @@
+<div id="sum" data-base-val1="10" data-base-val2="20">
+<script>
+    const sum = document.querySelector("#sum");
+    const val1 = parseInt(sum.dataset.baseVal1);
+    const val2 = parseInt(sum.dataset.baseVal2);
+    sum.dataset.sumVal = val1 + val2;
+    sum.textContent = val1 + val2;
+</script>
+</div>
