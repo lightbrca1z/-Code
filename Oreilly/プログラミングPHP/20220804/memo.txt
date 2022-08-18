@@ -1,0 +1,2 @@
+//等価演算子 equality operator
+//不等価演算子 inequality operator
