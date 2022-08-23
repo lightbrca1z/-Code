@@ -1,0 +1,1 @@
+console.log("1, 2, 3, \n4, 5".split(/\s*, \s*/));

@@ -1,0 +1,10 @@
+let url = new URL("https://example.com:8000/path/name?q=term#fragment");
+console.log(url.href);
+console.log(url.origin);
+console.log(url.protocol);
+console.log(url.host);
+console.log(url.hostname);
+console.log(url.port);
+console.log(url.pathname);
+console.log(url.search);
+console.log(url.hash);
