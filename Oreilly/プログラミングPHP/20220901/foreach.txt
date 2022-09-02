@@ -1,0 +1,10 @@
+配列の中身を取り出す。
+$value1 = [];
+foreach($values1 as $array){
+    print $array."<br/>";
+}
+
+配列の中身を連想配列として取り出す。
+foreach($value1 as $key => $value){
+    print $key."=>".$value;
+}
