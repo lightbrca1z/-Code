@@ -1,0 +1,28 @@
+ターミナルで
+sqlite3 データベース名。
+sqlite3 restaurant.db;
+
+.databases
+でファイルの確認
+
+.tablesで
+テーブルの確認
+
+create
+
+create TABLE dishes(
+	dish_id INTEGER PRIMARY KEY,
+	Dish_name VARCHAR(255),
+	price DECIMAL(4,2),
+	is_spicy INT
+)
+
+テーブル作成。
+
+/Users/lighttobrca/restaurant.db
+
+構造の確認
+.schema
+
+終了
+ .exit または .quit です。
