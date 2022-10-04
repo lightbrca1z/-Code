@@ -1,7 +1,6 @@
 <?php
 
 require 'formHelper.php';
-
 try{
     $db = new PDO('sqlite:/Users/lighttobrca/mydb.db');
 }
@@ -21,7 +20,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     //validate_form()がエラーを返したら, エラーをshow_form()に渡す。
     list($errors, $input) = validate_form();
     if($errors){
-        show_form($eerors);
+        show_form($errors);
     }else{
         //サブミットされた値が妥当なら処理する。
         process_form($input);
@@ -78,9 +77,9 @@ function process_form($input){
 
     //テーブルに新しい料理を挿入する。
     try{
-        $stmt = $db->prepare('INSERT INTO dishes (dish_name,price,is_spicy) VALUE (?,?,?)');
+        $stmt = $db->prepare('INSERT INTO dishes (dish_name,price,is_spicy) VALUES (?,?,?)');
         $stmt->execute(array($input['dish_name'], $input['price'], $is_spicy));
-        print 'Added'.htmlentities($input['dish_name']).' to the database.';
+        print 'Added '.htmlentities($input['dish_name']).' to the database.';
     }catch(PDOException $e){
         print "Couldn't add your dish to the database.";
     }

@@ -9,3 +9,5 @@
         <?php } ?>
 <form method="POST" action="<?= $form->encode($_SERVER['PHP_SELF']) ?>">
 <?PHP include 'formHelper.php'?>
+
+<form method="POST" action="<?= $form->encode($_SERVER['PHP_SELF'])?>">

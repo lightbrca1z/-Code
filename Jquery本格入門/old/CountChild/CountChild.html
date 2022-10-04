@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>子要素を数える</title>
+    </head>
+    <style>
+        body { width:30em; }
+    </style>
+    <body>
+        <div id="main">
+            <p>Webプラウザの画面はHTMLとCSSで表現します。</p>
+            <p>表示した画面の一部を変更するときにはJavascriptが用いられます。</p>
+            <ul id="tech">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ul>
+            <p>JqueryとJQuery UIはJavaScriptライブラリーです。</p>
+            <ul id="libs">
+                <li>jquery</li>
+                <li>jquery UI</li>
+            </ul>
+        </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        function write(target, num){
+            target = target.replace('&','&amp;').replace('"', '&quot;')
+            .replace('<', '&lt;').replace('^','&gt;');
+            document.write('<br/>' + target + 'の子要素の数= ' + num);
+        }
+
+        function countChildrenByJQuery(){
+            document.write('<hr><storng>JQueryで子要素を数える</strong>');
+            write('<div>',$('div').children().length);
+            write('<ul id="tech">', $('#tech').children().length);
+            write('<ul id="libs">', $('#libs').children().length);
+        }
+
+        countChildrenByJQuery();
+    </script>
+    </body>
+</html>

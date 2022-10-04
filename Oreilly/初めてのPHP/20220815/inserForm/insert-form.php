@@ -1,8 +1,6 @@
-<?php print "Hello, World!";?>
 
-<?PHP include 'formHelper.php'?>
-<form method="POST" action="<?= $form->encode($_SERVER['PHP_SELF']) ?>">
-<form method="POST" aciton="">
+<?php $errors = array();?>
+<form method="POST" action="">
 <table>
     
     <?php if($errors) { ?>
