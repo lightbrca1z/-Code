@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBmcSEE5AfVWASDtIffjdeoIMLAgMv67go" async defer>
+    </script>
+    <script type="text/javascript">
+    //現在位置を取得
+    function getCurrentPos(){
+        navigator.geolocation.getCurrentPosition(
+            okCallback,
+            ngCallback,
+            {
+                enableHighAccuracy:true,
+                maximumAge: 0,
+                timeout: 300000
+            }
+        );
+    }
+
+    //取得成功時のコールバック間数
+    function okCallback(pos){
+        //緯度の取得
+        var currentLatitude = pos.coords.latitude;
+        //経度の取得
+        var currentLongitude = pos.coords.longitude;
+
+        //マップに表示
+        showGeolocationMap(currentLatitude, currentLongitude);
+    }
+
+    //現在位置をマップに表示
+    function showGeolocationMap(latitude, longitude){
+        //緯度経度の値出力
+        document.getElementById("lati").innerHTML = latitude;
+        document.getElementById("longi").innerHTML = longitude;
+
+        //google mapに表示
+        var myPos = new google.maps.LatLng(latitude, longitude);
+        var myOptions = {
+            zoom: 14,
+            center: myPos,
+            scrollwheel: false,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var map = new google.maps.Map(document.getElementById('map_canvas'),
+        myOptions);
+    }
+
+function ngCallback(er){
+    //TODO:エラー時の処理
+    console.log("エラーです。");
+    console.log(er);
+}
+//画面表示時のソリ
+window.onload = function(){
+    getCurrentPos();
+}
+</script>
+</head>
+<body>
+<h1>Geolocation</h1>
+緯度<div id="lati"></div><br>
+経度<div id="longi"></div><br>
+<div id="map_canvas" style="width:500px;height:300px"></div>
+</body>
+</html>

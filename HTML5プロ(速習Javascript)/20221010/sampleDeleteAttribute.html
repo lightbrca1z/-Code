@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sampleDeleteAttribute</title>
+
+<script>
+    function deleteAttr(){
+
+        var divs = document.getElementsByTagName('div');
+
+        var div = divs.item(0);
+
+        var child = div.firstChild;
+
+        while(child){
+
+            if(child.nodeType == 1 && child.hasAttribute('style')){
+                child.removeAttribute('style');
+            }
+
+            child = child.nextSibling;
+        }
+    }
+</script>
+</head>
+
+<body>
+    
+    <div>
+        <p>1-1</p>
+        <p style="background-color:yellow;width:50px;">1-2</p>
+        <p>1-3</p>
+    </div>
+
+<button onclick="deleteAttr();">delete attribute</button>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style type="text/css">
+    p.sample{color:blue;}
+</style>
+
+<script>
+    window.onload = function(){
+        var a = "foo";
+        var b = "bar";
+
+        var x = 5;
+        var y = 10;
+        var z = 5;
+
+    // console.assert(x == z);
+    // console.assert(x == y);
+    // console.assert(x == y, "x == y?");
+
+    console.debug("This is a debug info.");
+    // console.error("This is an error info.");
+
+    console.info("This is a info.");
+
+    console.log("%s is %s.", a, b);
+
+    console.warn("This is a warn.");
+
+    console.trace();
+
+    console.dirxml(document.body);
+    // console.dirxml(docuemnt.body);
+
+    for(var i = 0; i < 3; i++){
+        console.count();
+    }
+
+    console.group("Group of messages");
+    console.log("log.");
+    console.warn("warn.");
+    console.groupEnd();
+
+    console.groupCollapsed("Group(Collapsed) of messages");
+    console.log("log.");
+    console.warn("warn.");
+    console.groupEnd();
+
+    console.time("sampleTimer");
+    console.timeEnd("sampleTimer");
+
+    console.profile();
+    var p = document.querySelectorAll("p.sample1, p.sample2");
+    for(var i = 0; i < p.length; i++){
+        window.alert(p[i].innerHTML);
+    }
+    console.profileEnd();
+    }
+</script>
+</head>
+<body>
+    <p class="sample1">適用対象1</p>
+    <p class="sample2">適用対象2</p>
+    <p class="sample3">適用対象外</p>
+</body>
+</html>

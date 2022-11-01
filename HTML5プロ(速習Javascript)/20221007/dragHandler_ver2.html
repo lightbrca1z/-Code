@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ドラッグ&ドロップのサンプル</title>
+
+<script>
+    
+    function dragHandler(event){
+
+        var pElement = document.getElementById("disp");
+
+        event.dataTransfer.setData("text", "COIN");
+
+        pElement.innerHTML = "dragged !";
+    }
+
+    function dropHandler(event){
+
+        var pElement = document.getElementById("disp");
+
+        id = event.dataTransfer.getData('text');
+
+        pElement.innerHTML = id + " dropped !";
+
+        event.preventDefault();
+    }
+
+function dropHandler2(event){
+    alert("dropHandler2() was called.");
+}
+
+function addHandler(){
+    targetObject = document.getElementById("to");
+    targetObject.addEventListener("drop", dropHandler2, false);
+}
+</script>
+</head>
+<body onload="addHandler();">
+   <div id="from" draggable="true" ondragstart="dragHandler(event);">
+        <p>【COIN】</p>
+   </div>
+   <p>
+    <div id="to" ondragover="event.preventDefault();" ondrop="dropHandler(event);">
+        <p>■BOX■</p>
+   </div>
+   <p id= "disp">status</p>  
+</body>
+</html>

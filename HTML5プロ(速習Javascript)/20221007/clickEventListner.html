@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Event</title>
+
+<script>
+    window.onload = function(){
+
+        document.getElementById("level1").addEventListener('click', function(){
+            alert('click!');
+        }, false);
+
+        //イベントオブジェクト発生
+        var customEvent = new Event('click');
+
+        //イベント発生
+        document.getElementById("level1").dispatchEvent(customEvent);
+    }
+</script>
+</head>
+<body>
+<div id='level1'>
+   click at level1 
+</div>
+</body>
+</html>

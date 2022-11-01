@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arc Draw</title>
+
+    <canvas id="board" width="640" height="600"></canvas>
+    
+<script>
+    var canvas = document.getElementById('board');
+    if(canvas.getContext){
+        var ctx = canvas.getContext('2d');
+    };
+
+    ctx.beginPath();
+    ctx.rect(10,10,60,100);
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.translate(80,20);
+    ctx.rect(10,10,60,100);
+    ctx.stroke();
+</script>
+</head>
+<body>
+    
+</body>
+</html>

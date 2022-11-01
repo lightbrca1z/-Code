@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<script>
+    window.onload = function(){
+        var disp = document.getElementsByTagName('p').item(0);
+        var intervalTimer = window.setInterval(
+            function(){
+                var currentDate = new Date();
+                disp.innerHTML = currentDate.toLocaleTimeString();
+            }
+            ,1000
+        );
+    };
+</script>
+
+</head>
+<body>
+    <p>LocalTime表示域</p>
+</body>
+</html>
