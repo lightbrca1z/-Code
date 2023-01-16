@@ -45,7 +45,7 @@
         document.dentaku.display.value = "";
     }else{
         if(btn.value == "×"){
-            bnt.value = "*";
+            btn.value = "*";
         }else if(btn.value == "/"){
             btn.value = "/";
     }
