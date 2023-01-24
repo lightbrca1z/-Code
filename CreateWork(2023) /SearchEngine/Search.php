@@ -38,15 +38,22 @@ try{
 
 // <Insert文。行追加。>
 // $sql = <<<SQL
+// delete from 'search';
 // INSERT INTO 'search' ('name') VALUES ('チャート式数学1');
-// INSERT INTO 'serach' ('name') VALUES ('チャート式数学A');
+// INSERT INTO 'search' ('name') VALUES ('チャート式数学A');
 // INSERT INTO 'search' ('name') VALUES ('チャート式数学2');
 // INSERT INTO 'search' ('name') VALUES ('チャート式数学B');
 // SQL;
 
+// var_dump($sql);
+
 // <SQL実行文>
 // try{
-//     !$pdo->query($sql); 
+//     // <一行実行>。
+//     // !$pdo->query($sql);
+//     // <複数行実行>。
+//     !$pdo->prepare($sql);
+//     !$pdo->exec($sql); 
 // }catch(Exception $error){
 //     echo "追加に失敗 - {$error}<br />";
 // }finally{
