@@ -9,5 +9,6 @@
 <body>
     <a href="regist.php">登録</a>
     <a href="showAccount.php">会員一覧</a>
+    <a href="delete.php">削除</a>
 </body>
 </html>
